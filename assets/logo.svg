@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E1B4F"/>
+      <stop offset="0.55" stop-color="#2D5BD0"/>
+      <stop offset="1" stop-color="#36CFC4"/>
+    </linearGradient>
+    <linearGradient id="wheel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DCE8FF"/>
+    </linearGradient>
+    <linearGradient id="trail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="tile">
+      <rect x="100" y="100" width="824" height="824" rx="185"/>
+    </clipPath>
+  </defs>
+
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#sky)"/>
+
+  <g clip-path="url(#tile)">
+    <!-- speed lines: the mouse is coasting -->
+    <g stroke="#FFFFFF" stroke-linecap="round" fill="none">
+      <line x1="300" y1="300" x2="300" y2="470" stroke-width="22" opacity="0.30"/>
+      <line x1="240" y1="360" x2="240" y2="500" stroke-width="18" opacity="0.18"/>
+      <line x1="724" y1="300" x2="724" y2="470" stroke-width="22" opacity="0.30"/>
+      <line x1="784" y1="360" x2="784" y2="500" stroke-width="18" opacity="0.18"/>
+    </g>
+
+    <!-- the mouse -->
+    <rect x="362" y="170" width="300" height="440" rx="150" fill="#FFFFFF" fill-opacity="0.10" stroke="#FFFFFF" stroke-width="30"/>
+    <line x1="512" y1="185" x2="512" y2="250" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" opacity="0.6"/>
+    <!-- the scroll wheel -->
+    <rect x="482" y="250" width="60" height="130" rx="30" fill="url(#wheel)"/>
+
+    <!-- waves: the page coasting to a stop -->
+    <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
+      <path d="M140 690 C 260 630, 380 630, 512 690 S 764 750, 884 690" stroke-width="34" opacity="0.95"/>
+      <path d="M140 780 C 260 730, 380 730, 512 780 S 764 830, 884 780" stroke-width="28" opacity="0.55"/>
+      <path d="M140 860 C 260 820, 380 820, 512 860 S 764 900, 884 860" stroke-width="22" opacity="0.28"/>
+    </g>
+  </g>
+</svg>
